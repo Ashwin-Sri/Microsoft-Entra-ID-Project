@@ -7,7 +7,7 @@ Simulate a real-world scenario of onboarding a new user by manually creating a c
 2. Navigated to **Users > All users > + New user**.
 3. Entered the following details:
    - **Name**: User3
-   - **Username**:User3@AshDC454.onmicrosoft.com
+   - **Username**:`User3@AshDC454.onmicrosoft.com`
    - Assigned **usage location** and default **password settings**.
 4. Verified the user appears in the user list.
 --
