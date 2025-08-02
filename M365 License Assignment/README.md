@@ -118,11 +118,10 @@ foreach ($member in $members) {
     }
 }
 ```
+<img width="1212" height="330" alt="image" src="https://github.com/user-attachments/assets/96511af6-bff0-45fc-8889-ee250334a851" />
+
 ---
 
-# License Assignment to Users in a Group (PowerShell)
-
-This script assigns Microsoft 365 licenses to all users in a specified security group using Microsoft Graph PowerShell.
 
 ## How the Script Works
 
@@ -144,7 +143,5 @@ This script assigns Microsoft 365 licenses to all users in a specified security 
 - Update the license SKU part number in the script if assigning a different license.
 - Change the UsageLocation value (`"IN"`) to the user's correct country code as needed.
 
-## Sample PowerShell Script
-
-*(Refer to the separate script file for the actual runnable script.)*
+---
 
