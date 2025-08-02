@@ -1,19 +1,19 @@
-## 🎯 Objective  
-Create a new Microsoft Entra ID cloud-only user account using PowerShell and Microsoft Graph.
+## Microsoft Entra ID – User Creation via PowerShell
 
-## 🛠️ Steps Performed
+This task demonstrates how to create a new cloud-only user in Microsoft Entra ID using PowerShell and Microsoft Graph SDK.
 
-1. Opened PowerShell as Administrator  
-2. Installed Microsoft Graph module:  
-   Install-Module Microsoft.Graph -Scope CurrentUser  
-   Import-Module Microsoft.Graph  
-3. Connected to Graph:  
-   Connect-MgGraph -Scopes "User.ReadWrite.All"  
-4. Created user:  
-   New-MgUser -AccountEnabled $true `
-   -DisplayName "User4" `
-   -MailNickname "User4" `
-   -UserPrincipalName "User4@AshDC454.onmicrosoft.com" `
-   -PasswordProfile @{ ForceChangePasswordNextSignIn = $true; Password = "DemoP@ssword123" } `
-   -UsageLocation "IN"  
-5. Verified user in Entra Admin Center.
+PowerShell is used to define user properties like display name, user principal name, mail nickname, and password. The account is created by passing this data to Microsoft Graph using the `New-MgUser` command.
+
+The Graph module is first installed and imported if not already present. A connection to Microsoft Graph is then established using the scope `User.ReadWrite.All`.
+
+In this example, the user created is:
+
+- Display Name: User4  
+- User Principal Name: `User4@AshDC454.onmicrosoft.com`
+- Mail Nickname: User4  
+- Password: P@ssword@2025  
+- Force password change at next sign-in: Enabled
+
+After successfully running the script, the user4 is added to Microsoft Entra ID and can be verified from the Entra admin portal under -Users--All Users.
+-
+<img width="906" height="212" alt="image" src="https://github.com/user-attachments/assets/6a1671a4-bbf7-430a-833d-129fc1a0307f" />
