@@ -4,7 +4,7 @@ This repository contains a collection of practical Microsoft Entra ID (formerly 
 
 ---
 
-## 🔧 Key Areas Covered
+##  Key Areas Covered
 - User and Group Management (manual and dynamic)
 - Group-Based License Assignment (automated)
 - Conditional Access Policy Setup
@@ -14,19 +14,19 @@ This repository contains a collection of practical Microsoft Entra ID (formerly 
 
 ---
 
-## 🧪 Lab Environment
+##  Lab Environment
 - Microsoft 365 Business Premium
 - Microsoft Entra ID portal
 - PowerShell modules: MSOnline, AzureAD, Microsoft.Graph
 
 ---
 
-## ✅ Goal
+##  Goal
 To demonstrate hands-on skills in identity lifecycle management, access policies, license automation, and security controls aligned with enterprise environments.
 
 ---
 
-## 📁 Structure
+##  Structure
 Each folder contains:
 - Project/task title
 - What problem it solves
