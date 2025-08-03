@@ -53,36 +53,62 @@ This document explains six commonly used methods to assign Microsoft 365 license
 ### 4. Assign License to a Single User (PowerShell)
 
 ```powershell
-Connect-MgGraph -Scopes "User.ReadWrite.All"
+Connect-MgGraph -Scopes "User.ReadWrite.All", "Directory.Read.All"
 
-$userUPN = "user1@yourtenant.onmicrosoft.com"
-$userId = (Get-MgUser -UserPrincipalName $userUPN).Id
+$userUPN = "user11@AshDC454.onmicrosoft.com"
 
+# Get the user
+$user = Get-MgUser -Filter "userPrincipalName eq '$userUPN'"
+$userId = $user.Id
+
+# Set usage location (e.g., India)
+Update-MgUser -UserId $userId -UsageLocation "IN"
+
+# Get SKU ID for Business Premium
 $skuId = (Get-MgSubscribedSku | Where-Object { $_.SkuPartNumber -eq "SPB" }).SkuId
 
-Set-MgUserLicense -UserId $userId -AddLicenses @{ SkuId = $skuId } -RemoveLicenses @()
+# Assign license
+Set-MgUserLicense -UserId $userId `
+    -AddLicenses @{ SkuId = $skuId } `
+    -RemoveLicenses @()
+
 ```
+<img width="848" height="802" alt="image" src="https://github.com/user-attachments/assets/233156ec-db29-4cae-a4a5-fbf7ece926bd" />
+<img width="1027" height="72" alt="image" src="https://github.com/user-attachments/assets/6d547665-a500-4631-af31-e4b1a5e7908c" />
+
 
 ---
 
 ### 5. Assign License to Multiple Users (PowerShell Bulk)
 
 ```powershell
-Connect-MgGraph -Scopes "User.ReadWrite.All"
+Connect-MgGraph -Scopes "User.ReadWrite.All", "Directory.Read.All"
 
 $skuId = (Get-MgSubscribedSku | Where-Object { $_.SkuPartNumber -eq "SPB" }).SkuId
 
 $userUPNs = @(
-    "user1@yourtenant.onmicrosoft.com",
-    "user2@yourtenant.onmicrosoft.com",
-    "user3@yourtenant.onmicrosoft.com"
+    "user12@AshDC454.onmicrosoft.com",
+    "user13@AshDC454.onmicrosoft.com"
 )
 
-foreach ($user in $userUPNs) {
-    $userId = (Get-MgUser -UserPrincipalName $user).Id
-    Set-MgUserLicense -UserId $userId -AddLicenses @{ SkuId = $skuId } -RemoveLicenses @()
+foreach ($userUPN in $userUPNs) {
+    try {
+        $user = Get-MgUser -Filter "userPrincipalName eq '$userUPN'"
+        $userId = $user.Id
+
+        Update-MgUser -UserId $userId -UsageLocation "IN"
+
+        Set-MgUserLicense -UserId $userId -AddLicenses @{ SkuId = $skuId } -RemoveLicenses @()
+
+        Write-Host "License assigned to $userUPN"
+    }
+    catch {
+        Write-Warning "Failed to process ${userUPN}: $_"
+    }
 }
 ```
+<img width="1023" height="120" alt="image" src="https://github.com/user-attachments/assets/4333e84d-9e57-48c3-8b2d-63544d5c932e" />
+<img width="1481" height="112" alt="image" src="https://github.com/user-attachments/assets/c20bf478-08df-4906-947c-51d686a0ac1e" />
 
 ---
 
