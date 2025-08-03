@@ -1,4 +1,4 @@
-## Microsoft Entra ID – User Creation via PowerShell
+## Microsoft Entra ID – Single User Creation via PowerShell
 
 This task demonstrates how to create a new cloud-only user in Microsoft Entra ID using PowerShell and Microsoft Graph SDK.
 
