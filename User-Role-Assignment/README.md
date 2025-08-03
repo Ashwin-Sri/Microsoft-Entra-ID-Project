@@ -42,3 +42,22 @@ To assign admin roles to a user (User1) in Microsoft Entra using the Entra admin
 <img width="1650" height="828" alt="image" src="https://github.com/user-attachments/assets/d2ad6337-0719-4c41-9571-149d6e5aaf8b" />
 
 
+# Assign Microsoft Entra Admin Role to a User (PowerShell)
+
+## Objective
+Assign the **License Administrator** role to a user (`User02@AshDC454.onmicrosoft.com`) using PowerShell and Microsoft Graph.
+
+---
+
+## Prerequisites
+
+- Microsoft Graph PowerShell module installed  
+  ```powershell
+  Install-Module Microsoft.Graph -Scope CurrentUser
+
+---
+### `User02@AshDC454.onmicrosoft.com` has been assigned the License Administrator role using PowerShell.
+### Screenshot:
+<img width="1542" height="417" alt="image" src="https://github.com/user-attachments/assets/20e45767-5d57-4248-9964-c45320269f70" />
+
+ **Script Location**: `Assign-Single-Roles.ps1`
