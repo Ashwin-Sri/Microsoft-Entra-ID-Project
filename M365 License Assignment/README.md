@@ -42,7 +42,7 @@ This document explains six commonly used methods to assign Microsoft 365 license
 
 ##  PowerShell-Based Methods
 
-> 🛠 Prerequisites:  
+> Prerequisites:  
 > Install Microsoft Graph PowerShell module if not already installed:  
 > `Install-Module Microsoft.Graph`  
 > Connect to Graph:  
