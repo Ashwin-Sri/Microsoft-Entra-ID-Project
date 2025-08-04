@@ -46,7 +46,7 @@ New-MgDirectoryRoleMemberByRef -DirectoryRoleId $role.Id -BodyParameter @{
 ```
 ---
 
-## `User02@AshDC454.onmicrosoft.com` has been assigned the License Administrator role using PowerShell.
+#### `User02@AshDC454.onmicrosoft.com` has been assigned the License Administrator role using PowerShell.
 ## Screenshot:
 <img width="1542" height="417" alt="image" src="https://github.com/user-attachments/assets/20e45767-5d57-4248-9964-c45320269f70" />
 
