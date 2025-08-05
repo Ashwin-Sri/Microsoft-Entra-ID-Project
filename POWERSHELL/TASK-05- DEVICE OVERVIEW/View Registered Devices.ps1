@@ -8,7 +8,7 @@ $devices = Get-MgDevice -All
 # Display relevant details
 $devices | Select-Object DisplayName, OperatingSystem, DeviceId, TrustType, IsCompliant, IsEnabled
 
-Optional: Export Device List to CSV
+# Optional: Export Device List to CSV
 
 $devices | Select-Object DisplayName, OperatingSystem, DeviceId, TrustType, IsCompliant, IsEnabled |
 Export-Csv -Path "C:\Entra-Registered-Devices.csv" -NoTypeInformation
