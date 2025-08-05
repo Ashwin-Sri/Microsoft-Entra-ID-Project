@@ -33,3 +33,12 @@ $devices | Select-Object DisplayName, OperatingSystem, DeviceId, TrustType, IsCo
 <img width="976" height="732" alt="image" src="https://github.com/user-attachments/assets/4f79fa70-306a-4f5f-81b7-7660e94c9fdf" />
 
 ---
+
+### Optional: Export Device List to CSV
+
+```powershell
+$devices | Select-Object DisplayName, OperatingSystem, DeviceId, TrustType, IsCompliant, IsEnabled |
+Export-Csv -Path "C:\Entra-Registered-Devices.csv" -NoTypeInformation
+```
+
+---
