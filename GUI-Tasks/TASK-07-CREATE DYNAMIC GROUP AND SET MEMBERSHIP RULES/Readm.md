@@ -2,7 +2,7 @@
 
 ## Objective
 
-Create a **Dynamic User Group** named `Operations Group 1` in Microsoft Entra ID. This group will automatically include users whose **department** attribute is set to `"Operations"`.
+Create a **Dynamic User Group** named `Operations Department 1` in Microsoft Entra ID. This group will automatically include users whose **department** attribute is set to `"Operations"`.
 
 ---
 
@@ -19,7 +19,7 @@ Create a **Dynamic User Group** named `Operations Group 1` in Microsoft Entra ID
 ### 2. Configure Group Details
 
 - **Group type**: Security  
-- **Group name**: `Operations Group 1`  
+- **Group name**: `Operations Department 1`  
 - **Group description**: `Users from Operations Department`  
 - **Membership type**: Dynamic User  
 - Click **Add dynamic query**
