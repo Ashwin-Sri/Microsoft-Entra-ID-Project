@@ -49,7 +49,38 @@ Get-MgUser -UserId $userUPN | Select-Object DisplayName, JobTitle, Department, O
 
 ---
 
-### Note
-  1.You can update multiple properties in a single command.
-  
-  2.To update users in bulk, loop through a CSV or list of users with different values
+# Run the PowerShell Script
+
+```
+# Connect to Microsoft Graph
+Connect-MgGraph -Scopes "User.ReadWrite.All"
+
+# Import users from the CSV file
+$users = Import-Csv ".\users.csv"
+
+# Loop through each user and update their properties
+foreach ($user in $users) {
+    Write-Host "Updating: $($user.UserPrincipalName)" -ForegroundColor Cyan
+
+    Set-MgUser -UserId $user.UserPrincipalName `
+        -JobTitle $user.JobTitle `
+        -Department $user.Department `
+        -OfficeLocation $user.OfficeLocation
+}
+```
+<img width="776" height="586" alt="image" src="https://github.com/user-attachments/assets/19eb4816-d047-4476-a658-7a121aa20d39" />
+
+---
+
+### Verify Updates (Per User)
+
+```
+Get-MgUser -UserId "User12@AshDC454.onmicrosoft.com" | Select DisplayName, JobTitle, Department, OfficeLocation
+Get-MgUser -UserId "User13@AshDC454.onmicrosoft.com" | Select DisplayName, JobTitle, Department, OfficeLocation
+Get-MgUser -UserId "User14@AshDC454.onmicrosoft.com" | Select DisplayName, JobTitle, Department, OfficeLocation
+```
+
+<img width="1207" height="217" alt="image" src="https://github.com/user-attachments/assets/095b879b-92dc-4964-88a8-0ae39b00c271" />
+
+---
+
