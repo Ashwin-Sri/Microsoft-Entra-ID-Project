@@ -17,7 +17,7 @@ This repository contains a collection of practical Microsoft Entra ID (formerly 
 ##  Lab Environment
 - Microsoft 365 Business Premium
 - Microsoft Entra ID portal
-- PowerShell modules: MSOnline, AzureAD, Microsoft.Graph
+- PowerShell modules: Microsoft.Graph
 
 ---
 
