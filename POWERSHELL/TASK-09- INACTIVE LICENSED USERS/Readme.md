@@ -1,4 +1,4 @@
-# Get-InactiveLicensedUsers.ps1
+# Get-InactiveLicensedUsers
 
 ## Overview
 
@@ -45,8 +45,6 @@ Ensure your app registration has the following:
 
 ---
 
-## Usage
-
 ### Run from PowerShell:
 
 ```powershell
@@ -56,3 +54,13 @@ Ensure your app registration has the following:
     -ClientSecret "your-client-secret-here" `
     -InactiveDays 90 `
     -OutputPath "C:\Reports\InactiveUsers.csv"
+```
+---
+
+## 🔐 Credential Handling
+
+This script uses a `param` block to accept credentials as input.  
+For security reasons, no secrets are hardcoded or stored in the repo.  
+If you're testing locally, provide your `TenantId`, `ClientId`, and `ClientSecret` manually when running the script.
+
+This repo is for showcasing automation logic — not for sharing production-ready secrets or modules.
