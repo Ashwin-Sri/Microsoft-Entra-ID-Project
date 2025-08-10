@@ -1,4 +1,5 @@
-# Microsoft Entra ID – Administration & Automation Showcase
+# Microsoft Entra ID – Administration & Automation Showcase                
+<img width="250" height="250" alt="image" src="https://github.com/user-attachments/assets/b536f72d-dddf-460a-88d1-976fdea17194" />
 
 This repository demonstrates my validated experience with Microsoft Entra ID (formerly Azure Active Directory), reflecting the depth and editorial rigor identity administrator role. Tasks are executed in a live tenant using both the Entra Admin Center and PowerShell, with screenshots, annotations, and outcome validation.
 
