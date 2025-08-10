@@ -38,4 +38,4 @@ All tasks are scoped to reflect real-world identity lifecycle, access control, a
 
 - All portal paths, role requirements, and licensing boundaries are validated against live tenant experience  
 - GUI and PowerShell tasks are separated to preserve clarity and role authenticity  
-- Conditional Access and security/compliance tasks are marked as adjacent and deferred due to licensing scope
+- Conditional Access policies are executed in the Entra Admin Center GUI. PowerShell-based automation and reporting for CA and compliance tasks are marked as adjacent and deferred due to licensing scope.
