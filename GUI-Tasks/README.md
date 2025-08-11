@@ -21,4 +21,4 @@ Each subfolder is named after a specific administrative task performed through t
 
 ---
 
-> This section of the project focuses on **manual (GUI-based)** administration of Microsoft Entra ID. For scripted automation tasks, see the [`Powershell`](../Powershell) folder.
+> This section of the project focuses on **manual (GUI-based)** administration of Microsoft Entra ID. For scripted automation tasks, see the [`Powershell`](../POWERSHELL) folder.
