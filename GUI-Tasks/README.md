@@ -1,24 +1,43 @@
-# Microsoft Entra ID – Portal-Based Administration Tasks
+# Microsoft Entra ID – GUI-Based Administration Tasks
 
-This folder contains task-wise documentation for managing **Microsoft Entra ID (Azure AD)** using the **Microsoft 365 Admin Center (Web Portal)**. Each task folder includes:
+This folder documents validated, role-authentic tasks performed in the **Microsoft Entra Admin Center (Web Portal)**. Each task reflects real-world identity lifecycle, access control, and license management workflows, supported by:
 
 - Step-by-step instructions  
-- Portal screenshots  
-- Detailed explanations of actions taken  
-  
+- Annotated portal screenshots  
+- Outcome validation and editorial notes  
+
 ---
 
-## Task List
+##  Scope
 
-Each subfolder is named after a specific administrative task performed through the portal, and contains its own `README.md` file with screenshots and steps.
+These tasks simulate professional Microsoft Entra ID administration experience, focused on GUI-native workflows. PowerShell-based automation is documented separately in the [`POWERSHELL`](../POWERSHELL) folder.
 
-### Example Tasks Included:
-- **Assign Licenses to Users**
-- **Assign Roles to Users**
+---
+
+##  Task List
+
+Each subfolder contains a `README.md` file with screenshots, portal paths, and validation notes.
+
+### Identity & Access Management
 - **Create Users and Groups**
+- **Assign Roles to Users**
 - **Group-Based License Assignment**
-- **Reset Password / Manage User Settings**
+- **Dynamic Group Membership Rules**
+- **Administrative Unit Delegation**
+
+### Governance & Lifecycle
+- **Access Reviews**
+- **Role Lifecycle via PIM**
+- **License Assignment & Audit Trail**
+- **Password Reset & User Settings**
+- **Group Expiration & Naming Policies**
+
+### Security & Conditional Access
+- **MFA Configuration**
+- **Conditional Access Policy Setup**
+- **SSPR Configuration**
+- **Sign-In Logs & Risk Insights**
 
 ---
 
-> This section of the project focuses on **manual (GUI-based)** administration of Microsoft Entra ID. For scripted automation tasks, see the [`Powershell`](../POWERSHELL) folder.
+> All tasks are validated in a live tenant and annotated to reflect licensing boundaries, role requirements, and GUI vs PowerShell scope. This track focuses exclusively on **manual (portal-based)** administration.
